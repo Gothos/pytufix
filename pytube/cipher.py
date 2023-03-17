@@ -407,6 +407,7 @@ def get_throttling_plan(js: str):
     transform_start = r"try{"
     plan_regex = re.compile(transform_start)
     match = plan_regex.search(raw_code)
+    return match
 
     transform_plan_raw = find_object_from_startpoint(raw_code, match.span()[1] - 1)
 
